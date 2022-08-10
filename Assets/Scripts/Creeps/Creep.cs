@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class Creep : MonoBehaviour
 {
-    public int health = 10;
-    void Start()
-    {
-        
-    }
+    public int health;
+    [SerializeField]
+    protected int exp;
+    protected int level_to_spawn;
 
-    // Update is called once per frame
     void Update()
     {
         Die();

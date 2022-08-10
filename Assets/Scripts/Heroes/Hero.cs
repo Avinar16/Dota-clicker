@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class Hero : MonoBehaviour
 {
-    public int Damage = 1;
-    private GameObject enemy;
+    public int Damage;
+    protected int exp;
+    [SerializeField]
+    protected int level = 1;
+
 
     void Update()
     {
@@ -14,12 +17,16 @@ public class Hero : MonoBehaviour
 
     void Attack()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Creep enemy = GameObject.FindGameObjectWithTag("Creep").GetComponent<Creep>();
-            Debug.Log($"attack {enemy.name} Health= {enemy.health}");
-            enemy.TakeDamage(Damage);
-        }
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                //find creep's script
+                Creep enemy = GameObject.FindGameObjectWithTag("Creep").GetComponent<Creep>();
+
+                enemy.TakeDamage(Damage);
+
+                // Log
+                Debug.Log($"attack {enemy.name} Health= {enemy.health}");
+           }
     }
 
 }
