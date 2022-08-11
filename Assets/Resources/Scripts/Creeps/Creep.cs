@@ -10,7 +10,7 @@ public class Creep : MonoBehaviour
     [SerializeField]
     protected int gold;
 
-    public int chance;
+
     private void Start()
     {
         Debug.Log(this.name);
@@ -29,7 +29,8 @@ public class Creep : MonoBehaviour
             Destroy(gameObject);
             Debug.Log("„ирик пиздык ху€к куку");
             // singleton
-            Main_spawner.main_spawner.Spawn();
+            // —ледующий крип в пачке
+            Main_spawner.main_spawner.NextCreep();
         }
     }
 }
