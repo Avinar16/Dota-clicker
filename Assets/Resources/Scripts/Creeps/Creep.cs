@@ -7,8 +7,14 @@ public class Creep : MonoBehaviour
     public int health;
     [SerializeField]
     protected int exp;
-    protected int level_to_spawn;
+    [SerializeField]
+    protected int gold;
 
+    public int chance;
+    private void Start()
+    {
+        Debug.Log(this.name);
+    }
     void Update()
     {
         Die();
@@ -22,6 +28,8 @@ public class Creep : MonoBehaviour
         {
             Destroy(gameObject);
             Debug.Log("„ирик пиздык ху€к куку");
+            // singleton
+            Main_spawner.main_spawner.Spawn();
         }
     }
 }
