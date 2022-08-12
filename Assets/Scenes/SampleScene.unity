@@ -644,7 +644,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7fd4eae4f8e0874b94cdb9ffabf5177, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthBar: {fileID: 1186080749792628075, guid: cacd26eca1d35e3489805624ffd1f5f1, type: 3}
   Lane_creeps: {fileID: 2108833900}
+  canvas: {fileID: 2041499161}
   creeps_choice: []
 --- !u!114 &2108833900
 MonoBehaviour:

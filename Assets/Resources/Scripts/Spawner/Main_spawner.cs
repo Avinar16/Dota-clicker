@@ -9,7 +9,13 @@ public class Main_spawner : MonoBehaviour
     public static Main_spawner main_spawner { get; private set; }
 
     [SerializeField]
+    private GameObject healthBar;
+
+    [SerializeField]
     private Lane_spawner Lane_creeps;
+
+    [SerializeField]
+    private GameObject canvas;
 
     // Переменная с выбранными крипами
     public List<GameObject> creeps_choice;
@@ -46,10 +52,15 @@ public class Main_spawner : MonoBehaviour
     public void Spawn()
     {
             GameObject creep_to_spawn = creeps_choice[0];
-            // Если шанс спавна >= выпавшему шансу, то спавним
             GameObject enemy_creep = Instantiate(creep_to_spawn, new Vector3(5, 0, 0), Quaternion.identity);
+            GameObject enemy_hp = Instantiate(healthBar, new Vector3(5, 10, 0), Quaternion.identity);
+            enemy_hp.transform.SetParent(canvas.transform, false);
+        Debug.Log(enemy_hp);
 
     }
+
+   
+
     // выбор крипов ( придёт из UI)
     public void ChooseCreeps(string creeps)
     {

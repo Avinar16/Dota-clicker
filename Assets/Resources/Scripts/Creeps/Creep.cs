@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Creep : MonoBehaviour
 {
@@ -10,18 +11,21 @@ public class Creep : MonoBehaviour
     [SerializeField]
     protected int gold;
 
-
-    private void Start()
+    private void Awake()
     {
         Debug.Log(this.name);
     }
+
+
     void Update()
     {
         Die();
     }
+
     public void TakeDamage(int damage) {
         health -= damage;
     }
+
     private void Die()
     {
         if(health <= 0)
