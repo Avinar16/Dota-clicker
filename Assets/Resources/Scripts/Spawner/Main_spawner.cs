@@ -18,7 +18,7 @@ public class Main_spawner : MonoBehaviour
     private GameObject canvas;
 
     // Переменная с выбранными крипами
-    public List<GameObject> creeps_choice;
+    public List<GameObject> Wave;
 
     // Дефолт выбор
     private string choice = "Lane_creeps";
@@ -51,40 +51,49 @@ public class Main_spawner : MonoBehaviour
     }
     public void Spawn()
     {
-            GameObject creep_to_spawn = creeps_choice[0];
-            GameObject enemy_creep = Instantiate(creep_to_spawn, new Vector3(5, 0, 0), Quaternion.identity);
-            GameObject enemy_hp = Instantiate(healthBar, new Vector3(5, 10, 0), Quaternion.identity);
-            enemy_hp.transform.SetParent(canvas.transform, false);
-        Debug.Log(enemy_hp);
+        // Выбираем
+        GameObject creep_to_spawn = Wave[0];
+        enemy_creep = Instantiate(creep_to_spawn, new Vector3(5, 0, 0), Quaternion.identity) as GameObject;
+        Creep enemy_creep_script = enemy_creep.GetComponent<Creep>();
 
+        // Создаем хп бар
+        GameObject enemy_hp = Instantiate(healthBar, new Vector3(5, 10, 0), Quaternion.identity);
+        // Ставим хп бар на канвас
+        enemy_hp.transform.SetParent(canvas.transform, false);
+
+        // Задаем крипу его хп бар
+        enemy_creep_script.SetHealthBar(enemy_hp);
+       
     }
 
-   
 
-    // выбор крипов ( придёт из UI)
+
+    // выбор крипов ( придёт из UI) ПОКА НЕ РАБОТАЕТ
+    /*
     public void ChooseCreeps(string creeps)
     {
         choice = creeps;
-        creeps_choice = creeps_dict[choice].GetOrder();
+        Wave = creeps_dict[choice].GetOrder();
         Destroy(enemy_creep);
-        Spawn();
+        CreateWave();
     }
+    */
     private void CreateWave()
     {
-        creeps_choice = creeps_dict[choice].GetOrder();
+        Wave = creeps_dict[choice].GetOrder();
         Spawn();
     }
     // Следующий крип в пачке, если таких не осталось -> следующая пачка
     public void NextCreep()
     {
-        
-        creeps_choice.RemoveAt(0);
-        if (creeps_choice.Count == 0)
+
+        Wave.RemoveAt(0);
+        if (Wave.Count == 0)
         {
-            Debug.Log($"У нас всё закончилось {creeps_choice.Count}");
+            Debug.Log($"У нас всё закончилось {Wave.Count}");
             CreateWave();
         }
-        else { Spawn(); Debug.Log($"Спавним некст {creeps_choice.Count}") ;  }
+        else { Spawn(); Debug.Log($"Спавним некст {Wave.Count}") ;  }
         
     }
             

@@ -7,27 +7,24 @@ public class HealthBar : MonoBehaviour
 {
     private Slider health_bar;
 
-    [SerializeField]
-    private Creep creep;
 
-    public void Init()
+    public void Init(int max_hp)
     {
-        creep = GameObject.FindGameObjectWithTag("Creep").GetComponent<Creep>();
+        // Получаем слайдер
         health_bar = gameObject.GetComponent<Slider>();
+        // Задаем место, где будет полоска хп
         gameObject.transform.localPosition = new Vector3(550, 350, 0);
+        // Задаем максимальное и стартовое значения
+        health_bar.maxValue = max_hp;
+        health_bar.value = max_hp;
     }
 
-    private void Update()
+    public void SetHp(int hp)
     {
-        health_bar.value = creep.health;
-
-        if (creep.health <= 0) { Destroy(gameObject); }
+        health_bar.value = hp;
+        // Если нет хп, удаляем полоску хп
+        if (health_bar.value <= 0) { Destroy(gameObject); }       
     }
+    
 
-    private void Start()
-    {
-        Init();
-        health_bar.maxValue = creep.health;
-        health_bar.value = creep.health;
-    }
 }

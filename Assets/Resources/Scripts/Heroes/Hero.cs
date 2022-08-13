@@ -25,7 +25,7 @@ public class Hero : MonoBehaviour
                 enemy.TakeDamage(Damage);
 
                 // Log
-                Debug.Log($"attack {enemy.name} Health= {enemy.health}");
+                //Debug.Log($"attack {enemy.name} Health= {enemy.health}");
            }
     }
 

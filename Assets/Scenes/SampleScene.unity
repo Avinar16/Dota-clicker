@@ -647,7 +647,7 @@ MonoBehaviour:
   healthBar: {fileID: 1186080749792628075, guid: cacd26eca1d35e3489805624ffd1f5f1, type: 3}
   Lane_creeps: {fileID: 2108833900}
   canvas: {fileID: 2041499161}
-  creeps_choice: []
+  Wave: []
 --- !u!114 &2108833900
 MonoBehaviour:
   m_ObjectHideFlags: 0

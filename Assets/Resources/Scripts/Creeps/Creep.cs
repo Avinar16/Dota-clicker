@@ -11,10 +11,9 @@ public class Creep : MonoBehaviour
     [SerializeField]
     protected int gold;
 
-    private void Awake()
-    {
-        Debug.Log(this.name);
-    }
+    
+    private HealthBar health_bar;
+
 
 
     void Update()
@@ -24,6 +23,7 @@ public class Creep : MonoBehaviour
 
     public void TakeDamage(int damage) {
         health -= damage;
+        health_bar.SetHp(health);
     }
 
     private void Die()
@@ -36,5 +36,11 @@ public class Creep : MonoBehaviour
             // Следующий крип в пачке
             Main_spawner.main_spawner.NextCreep();
         }
+    }
+
+    public void SetHealthBar(GameObject hpbar_game_object)
+    {
+        health_bar = hpbar_game_object.GetComponent<HealthBar>();
+        health_bar.Init(health);
     }
 }
