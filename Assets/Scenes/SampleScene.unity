@@ -169,7 +169,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 1.0144451
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -849,12 +849,20 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6621527361195265226, guid: a85f164f549fcf44283ed4af4be7f6f4, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.72849566
+      objectReference: {fileID: 0}
+    - target: {fileID: 6621527361195265226, guid: a85f164f549fcf44283ed4af4be7f6f4, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.8381023
+      objectReference: {fileID: 0}
+    - target: {fileID: 6621527361195265226, guid: a85f164f549fcf44283ed4af4be7f6f4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.86
+      value: -3.16
       objectReference: {fileID: 0}
     - target: {fileID: 6621527361195265226, guid: a85f164f549fcf44283ed4af4be7f6f4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.04
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 6621527361195265226, guid: a85f164f549fcf44283ed4af4be7f6f4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -915,6 +923,22 @@ PrefabInstance:
     - target: {fileID: 6621527361195265268, guid: a85f164f549fcf44283ed4af4be7f6f4, type: 3}
       propertyPath: m_Name
       value: juggernaut
+      objectReference: {fileID: 0}
+    - target: {fileID: 6621527361195265269, guid: a85f164f549fcf44283ed4af4be7f6f4, type: 3}
+      propertyPath: m_Size.x
+      value: 12.799999
+      objectReference: {fileID: 0}
+    - target: {fileID: 6621527361195265269, guid: a85f164f549fcf44283ed4af4be7f6f4, type: 3}
+      propertyPath: m_Size.y
+      value: 7.1999993
+      objectReference: {fileID: 0}
+    - target: {fileID: 6621527361195265269, guid: a85f164f549fcf44283ed4af4be7f6f4, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: aae53bd138dacab48861fbdc02c847a3, type: 3}
+    - target: {fileID: 6621527361195265269, guid: a85f164f549fcf44283ed4af4be7f6f4, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8973258050325742023, guid: a85f164f549fcf44283ed4af4be7f6f4, type: 3}
       propertyPath: m_Controller
