@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ef7b2ab2d91776947bb1aa8fc66639e9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6a0b8b10e75fd4746b9a4815b9e11c26, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -98,8 +98,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3637c3f22ed01674a950f4d4d03004e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   Damage: 50
   level: 1
+  attackSounds: []
 --- !u!95 &8973258050325742023
 Animator:
   serializedVersion: 4
