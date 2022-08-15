@@ -630,7 +630,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2108833899
 MonoBehaviour:
@@ -644,7 +644,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7fd4eae4f8e0874b94cdb9ffabf5177, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthBar: {fileID: 1186080749792628075, guid: cacd26eca1d35e3489805624ffd1f5f1, type: 3}
+  healthBar: {fileID: 1186080749792628075, guid: cacd26eca1d35e3489805624ffd1f5f1,
+    type: 3}
   Lane_creeps: {fileID: 2108833900}
   canvas: {fileID: 2041499161}
   Wave: []
@@ -660,65 +661,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10d436de5f2069645a5dca3114f14aa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Melee_creep: {fileID: 5008343958570890152, guid: 324820102bae6024485949de73112107, type: 3}
-  Range_creep: {fileID: 5835452679137360378, guid: 7cf2d3e42491c5f46817ee629f42b48d, type: 3}
-  Catapult_creep: {fileID: 220071974009551501, guid: d182335649ba46b47807a35251d8dbe2, type: 3}
---- !u!1001 &6621527359333283434
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 2
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 6621527361195265226, guid: a85f164f549fcf44283ed4af4be7f6f4, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6621527361195265226, guid: a85f164f549fcf44283ed4af4be7f6f4, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -4.34
-      objectReference: {fileID: 0}
-    - target: {fileID: 6621527361195265226, guid: a85f164f549fcf44283ed4af4be7f6f4, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6621527361195265226, guid: a85f164f549fcf44283ed4af4be7f6f4, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6621527361195265226, guid: a85f164f549fcf44283ed4af4be7f6f4, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6621527361195265226, guid: a85f164f549fcf44283ed4af4be7f6f4, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6621527361195265226, guid: a85f164f549fcf44283ed4af4be7f6f4, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6621527361195265226, guid: a85f164f549fcf44283ed4af4be7f6f4, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6621527361195265226, guid: a85f164f549fcf44283ed4af4be7f6f4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6621527361195265226, guid: a85f164f549fcf44283ed4af4be7f6f4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6621527361195265226, guid: a85f164f549fcf44283ed4af4be7f6f4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6621527361195265268, guid: a85f164f549fcf44283ed4af4be7f6f4, type: 3}
-      propertyPath: m_Name
-      value: juggernaut
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_AddedGameObjects: []
-  m_SourcePrefab: {fileID: 100100000, guid: a85f164f549fcf44283ed4af4be7f6f4, type: 3}
+  Melee_creep: {fileID: 5008343958570890152, guid: 324820102bae6024485949de73112107,
+    type: 3}
+  Range_creep: {fileID: 5835452679137360378, guid: 7cf2d3e42491c5f46817ee629f42b48d,
+    type: 3}
+  Catapult_creep: {fileID: 220071974009551501, guid: d182335649ba46b47807a35251d8dbe2,
+    type: 3}
