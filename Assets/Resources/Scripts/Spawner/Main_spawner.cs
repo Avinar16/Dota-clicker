@@ -23,6 +23,7 @@ public class Main_spawner : MonoBehaviour
     // Дефолт выбор
     private string choice = "Lane_creeps";
 
+
     // переменная со всеми крипами
     private Dictionary<string, Basic_spawner> creeps_dict;
 
@@ -53,7 +54,8 @@ public class Main_spawner : MonoBehaviour
     {
         // Выбираем
         GameObject creep_to_spawn = Wave[0];
-        enemy_creep = Instantiate(creep_to_spawn, new Vector3(5, 0, 0), Quaternion.identity) as GameObject;
+        enemy_creep = Instantiate(creep_to_spawn, new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
+        enemy_creep.transform.SetParent(gameObject.transform, false);
         Creep enemy_creep_script = enemy_creep.GetComponent<Creep>();
 
         // Создаем хп бар
