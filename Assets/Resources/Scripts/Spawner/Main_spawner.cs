@@ -15,6 +15,10 @@ public class Main_spawner : MonoBehaviour
     private Lane_spawner Lane_creeps;
 
     [SerializeField]
+    private Forest_spawner Forest_creeps;
+
+
+    [SerializeField]
     private GameObject canvas;
 
     // Переменная с выбранными крипами
@@ -43,7 +47,8 @@ public class Main_spawner : MonoBehaviour
         // Словарь со всеми типами крипов
         creeps_dict =  new Dictionary<string, Basic_spawner>
         {
-            {"Lane_creeps",  Lane_creeps}
+            {"Lane_creeps",  Lane_creeps},
+            {"Forest_creeps",  Forest_creeps}
         };
 
         //Первая пачка
@@ -71,17 +76,21 @@ public class Main_spawner : MonoBehaviour
 
 
     // выбор крипов ( придёт из UI) ПОКА НЕ РАБОТАЕТ
-    /*
+    
     public void ChooseCreeps(string creeps)
     {
         choice = creeps;
-        Wave = creeps_dict[choice].GetOrder();
         Destroy(enemy_creep);
+        Debug.Log("Выбор");
         CreateWave();
     }
-    */
+    
     private void CreateWave()
     {
+        if (enemy_creep)
+        {
+
+        }
         Wave = creeps_dict[choice].GetOrder();
         Spawn();
     }
@@ -99,4 +108,4 @@ public class Main_spawner : MonoBehaviour
         
     }
             
-        } 
+        }   

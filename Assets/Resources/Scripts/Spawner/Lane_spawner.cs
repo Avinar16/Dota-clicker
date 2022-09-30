@@ -12,6 +12,7 @@ public class Lane_spawner : Basic_spawner
     private GameObject Catapult_creep;
 
 
+
     public override List<GameObject> GetOrder()
     {
         List<GameObject> order = new List<GameObject>();
@@ -25,6 +26,14 @@ public class Lane_spawner : Basic_spawner
         {
             order.Add(Catapult_creep);
         }
+
+        setBackground();
+
         return order;
+    }
+
+    public override void setBackground()
+    {
+        background.sprite = sprite;
     }
 }

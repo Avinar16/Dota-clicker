@@ -133,7 +133,6 @@ GameObject:
   m_Component:
   - component: {fileID: 12440861}
   - component: {fileID: 12440864}
-  - component: {fileID: 12440865}
   - component: {fileID: 12440863}
   - component: {fileID: 12440862}
   m_Layer: 0
@@ -208,16 +207,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 12440865}
-        m_TargetAssemblyTypeName: ChangeBackgrond, Assembly-CSharp
-        m_MethodName: backgroundChanger
-        m_Mode: 1
+      - m_Target: {fileID: 2108833899}
+        m_TargetAssemblyTypeName: Main_spawner, Assembly-CSharp
+        m_MethodName: ChooseCreeps
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Lane_creeps
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &12440863
@@ -258,98 +257,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 12440860}
   m_CullTransparentMesh: 1
---- !u!114 &12440865
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 12440860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7abf1f5f10277e44cb050334a9d8ec30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  firstNoActive: {fileID: 1740638492}
-  secondActive: {fileID: 1265125014}
-  thirdNoActive: {fileID: 416104465}
-  isLine: 0
---- !u!1 &416104465
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 416104468}
-  - component: {fileID: 416104467}
-  - component: {fileID: 416104466}
-  m_Layer: 5
-  m_Name: roshanBackgrond
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &416104466
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 416104465}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ecd476a656acb624788996f278f3e9f3, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &416104467
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 416104465}
-  m_CullTransparentMesh: 1
---- !u!224 &416104468
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 416104465}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2041499162}
-  m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.44092, y: 0.0024414}
-  m_SizeDelta: {x: 1613, y: 1080}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &480842635
 GameObject:
   m_ObjectHideFlags: 0
@@ -1024,16 +931,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 816193940}
-        m_TargetAssemblyTypeName: ChangeBackgrond, Assembly-CSharp
-        m_MethodName: backgroundChanger
-        m_Mode: 1
+      - m_Target: {fileID: 2108833899}
+        m_TargetAssemblyTypeName: Main_spawner, Assembly-CSharp
+        m_MethodName: ChooseCreeps
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Forest_creeps
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &816193938
@@ -1087,8 +994,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firstNoActive: {fileID: 1265125014}
-  secondActive: {fileID: 1740638492}
-  thirdNoActive: {fileID: 416104465}
+  secondActive: {fileID: 0}
+  thirdNoActive: {fileID: 0}
   isLine: 0
 --- !u!1 &876254906
 GameObject:
@@ -1524,8 +1431,8 @@ GameObject:
   - component: {fileID: 1265125017}
   - component: {fileID: 1265125016}
   m_Layer: 5
-  m_Name: lineBackgrond
-  m_TagString: Untagged
+  m_Name: Backgrond
+  m_TagString: Background
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1751,19 +1658,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1371730724}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1371730726}
-        m_TargetAssemblyTypeName: ChangeBackgrond, Assembly-CSharp
-        m_MethodName: backgroundChanger
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1371730724
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1815,8 +1710,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firstNoActive: {fileID: 1265125014}
-  secondActive: {fileID: 416104465}
-  thirdNoActive: {fileID: 1740638492}
+  secondActive: {fileID: 0}
+  thirdNoActive: {fileID: 0}
   isLine: 0
 --- !u!1 &1410422518
 GameObject:
@@ -1951,6 +1846,10 @@ PrefabInstance:
     - target: {fileID: 9055243107617447105, guid: 23d6a7b526aa38d4eb232c07f96ae223, type: 3}
       propertyPath: m_Name
       value: juggernaut_new
+      objectReference: {fileID: 0}
+    - target: {fileID: 9055243107617447133, guid: 23d6a7b526aa38d4eb232c07f96ae223, type: 3}
+      propertyPath: Damage
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 9055243107617447135, guid: 23d6a7b526aa38d4eb232c07f96ae223, type: 3}
       propertyPath: m_RootOrder
@@ -2145,82 +2044,6 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1600463523}
-  m_CullTransparentMesh: 1
---- !u!1 &1740638492
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1740638493}
-  - component: {fileID: 1740638495}
-  - component: {fileID: 1740638494}
-  m_Layer: 5
-  m_Name: forestCreepsBackgrond
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &1740638493
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1740638492}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2041499162}
-  m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0.0000038146973, y: -0.0000038146973}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1740638494
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1740638492}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 146d8c26c8a60bb47be0125dd118cb45, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1740638495
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1740638492}
   m_CullTransparentMesh: 1
 --- !u!1 &1804467006
 GameObject:
@@ -2528,8 +2351,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1265125015}
-  - {fileID: 1740638493}
-  - {fileID: 416104468}
   - {fileID: 1970716293}
   - {fileID: 525114206}
   m_Father: {fileID: 747682796}
@@ -2613,6 +2434,7 @@ GameObject:
   - component: {fileID: 2108833897}
   - component: {fileID: 2108833899}
   - component: {fileID: 2108833900}
+  - component: {fileID: 2108833901}
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
@@ -2649,6 +2471,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 1186080749792628075, guid: cacd26eca1d35e3489805624ffd1f5f1, type: 3}
   Lane_creeps: {fileID: 2108833900}
+  Forest_creeps: {fileID: 2108833901}
   canvas: {fileID: 2041499161}
   Wave: []
 --- !u!114 &2108833900
@@ -2663,6 +2486,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10d436de5f2069645a5dca3114f14aa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  background: {fileID: 1265125016}
+  sprite: {fileID: 21300000, guid: f50102a210a713d4d8be05acccf79ff5, type: 3}
   Melee_creep: {fileID: 5008343958570890152, guid: 324820102bae6024485949de73112107, type: 3}
   Range_creep: {fileID: 5835452679137360378, guid: 7cf2d3e42491c5f46817ee629f42b48d, type: 3}
   Catapult_creep: {fileID: 220071974009551501, guid: d182335649ba46b47807a35251d8dbe2, type: 3}
+--- !u!114 &2108833901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2108833895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e803f53ae5414846a415e6dc965d630, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  background: {fileID: 1265125016}
+  sprite: {fileID: 21300000, guid: 146d8c26c8a60bb47be0125dd118cb45, type: 3}
+  krisa: {fileID: 6120469945487260822, guid: 4f62152fd73ef71478299d26ef866e87, type: 3}

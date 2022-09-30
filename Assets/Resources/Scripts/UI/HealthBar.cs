@@ -23,7 +23,8 @@ public class HealthBar : MonoBehaviour
     {
         health_bar.value = hp;
         // Если нет хп, удаляем полоску хп
-        if (health_bar.value <= 0) { Destroy(gameObject); }       
+        if (health_bar.value <= 0) { Destroy(gameObject); }
+        
     }
     
 

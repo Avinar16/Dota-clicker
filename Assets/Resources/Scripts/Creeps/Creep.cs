@@ -14,8 +14,6 @@ public class Creep : MonoBehaviour
     
     private HealthBar health_bar;
 
-
-
     void Update()
     {
         Die();
