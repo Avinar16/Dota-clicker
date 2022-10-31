@@ -10,6 +10,7 @@ public class Main_spawner : MonoBehaviour
 
     [SerializeField]
     private GameObject healthBar;
+    private GameObject enemy_hp;
 
     [SerializeField]
     private Lane_spawner Lane_creeps;
@@ -64,7 +65,7 @@ public class Main_spawner : MonoBehaviour
         Creep enemy_creep_script = enemy_creep.GetComponent<Creep>();
 
         // Создаем хп бар
-        GameObject enemy_hp = Instantiate(healthBar, new Vector3(5, 10, 0), Quaternion.identity);
+        enemy_hp = Instantiate(healthBar, new Vector3(5, 10, 0), Quaternion.identity);
         // Ставим хп бар на канвас
         enemy_hp.transform.SetParent(canvas.transform, false);
 
@@ -81,16 +82,13 @@ public class Main_spawner : MonoBehaviour
     {
         choice = creeps;
         Destroy(enemy_creep);
-        Debug.Log("Выбор");
+        Destroy(enemy_hp);
+        //Debug.Log("Выбор");
         CreateWave();
     }
     
     private void CreateWave()
     {
-        if (enemy_creep)
-        {
-
-        }
         Wave = creeps_dict[choice].GetOrder();
         Spawn();
     }

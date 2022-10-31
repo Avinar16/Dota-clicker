@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 6256151064206818638}
   m_Layer: 5
   m_Name: HealthBar
-  m_TagString: Untagged
+  m_TagString: HealthBar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -179,7 +179,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc900d8b5df61e549a995ba15dae9b8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 0}
 --- !u!1 &1186080749921398249
 GameObject:
   m_ObjectHideFlags: 0
