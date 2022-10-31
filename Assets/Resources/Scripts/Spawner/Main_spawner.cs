@@ -76,7 +76,7 @@ public class Main_spawner : MonoBehaviour
 
 
 
-    // выбор крипов ( придЄт из UI) ѕќ ј Ќ≈ –јЅќ“ј≈“
+    // выбор крипов ( придЄт из UI)
     
     public void ChooseCreeps(string creeps)
     {

@@ -29,7 +29,6 @@ public class Creep : MonoBehaviour
         if(health <= 0)
         {
             Destroy(gameObject);
-            Debug.Log("„ирик пиздык ху€к куку");
             // singleton
             // —ледующий крип в пачке
             Main_spawner.main_spawner.NextCreep();

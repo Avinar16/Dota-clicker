@@ -24,7 +24,6 @@ public class Hero : MonoBehaviour
     public void attackSoundPlay()
     {
         audioSourse.PlayOneShot(attackSounds[Random.Range(0, attackSounds.Length)]);
-        print("’у€ндок");
     }
 
     void Update()
@@ -45,7 +44,7 @@ public class Hero : MonoBehaviour
                 enemy.TakeDamage(Damage);
 
                 // Log
-                Debug.Log($"attack {enemy.name} Health= {enemy.health}");
+                //Debug.Log($"attack {enemy.name} Health= {enemy.health}");
 
             }
             else

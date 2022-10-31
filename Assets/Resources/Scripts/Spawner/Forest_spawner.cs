@@ -5,18 +5,41 @@ using UnityEngine.UI;
 
 public class Forest_spawner : Basic_spawner
 {
+
     [SerializeField]
-    private GameObject krisa;
+    private List<GameObject> Satyrs;
+
+    [SerializeField]
+    private List<GameObject> Centaurus;
+
+    [SerializeField]
+    private List<GameObject> Wolves;
+
+    [SerializeField]
+    private List<GameObject> Ogres;
+
+    [SerializeField]
+    private List<GameObject> Owls;
+
+    [SerializeField]
+    private List<GameObject> Ursas;
+
+    [SerializeField]
+    private List<GameObject> Trolls;
+
+
+
+
 
     public override List<GameObject> GetOrder()
     {
-        List<GameObject> order = new List<GameObject>();
-        order.Add(krisa);
-        order.Add(krisa);
-        order.Add(krisa);
-
+        // Массив всех списков крипов
+        List<GameObject>[] All = {Satyrs, Centaurus, Wolves, Ogres, Owls, Ursas, Trolls};
+        // Рандомный спавн крипов
+        int index = Random.Range(0, All.Length);
+        // Копия листа крипов из массива
+        List<GameObject> order = All[index].GetRange(0, All[index].Count);
         setBackground();
-
         return order;
     }
 
@@ -25,4 +48,5 @@ public class Forest_spawner : Basic_spawner
     {
         background.sprite = sprite;
     }
+
 }
