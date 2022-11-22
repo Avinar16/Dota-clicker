@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6631357151841013801}
   - component: {fileID: 4234953524749249800}
   - component: {fileID: 7248530130229578908}
+  - component: {fileID: 2260280250000092023}
   m_Layer: 0
   m_Name: dire_creep
   m_TagString: Creep
@@ -99,5 +100,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 550
   exp: 57
-  gold: 0
-  chance: 10
+  gold: 100
+--- !u!114 &2260280250000092023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5008343958570890152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07957a34893d1e341b4cbbac1af83dd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goldText: {fileID: 0}
+  currentGold: 0

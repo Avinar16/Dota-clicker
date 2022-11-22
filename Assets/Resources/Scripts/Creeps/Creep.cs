@@ -9,9 +9,10 @@ public class Creep : MonoBehaviour
     [SerializeField]
     protected int exp;
     [SerializeField]
-    protected int gold;
-
+    public int gold;
     
+
+
     private HealthBar health_bar;
 
 
@@ -30,7 +31,9 @@ public class Creep : MonoBehaviour
     {
         if(health <= 0)
         {
+            GoldCounter.currentGold += gold;
             Destroy(gameObject);
+            
             Debug.Log("„ирик пиздык ху€к куку");
             // singleton
             // —ледующий крип в пачке
