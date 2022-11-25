@@ -28,6 +28,8 @@ public class Creep : MonoBehaviour
     {
         if(health <= 0)
         {
+            //добавление золота в счётчик золота
+            GoldCounter.currentGold += gold;
             Destroy(gameObject);
             // singleton
             // Следующий крип в пачке
