@@ -13,7 +13,7 @@ public class HealthBar : MonoBehaviour
         // Получаем слайдер
         health_bar = gameObject.GetComponent<Slider>();
         // Задаем место, где будет полоска хп
-        gameObject.transform.localPosition = new Vector3(550, 350, 0);
+        gameObject.transform.localPosition = new Vector3(400, 350, 0);
         // Задаем максимальное и стартовое значения
         health_bar.maxValue = max_hp;
         health_bar.value = max_hp;
