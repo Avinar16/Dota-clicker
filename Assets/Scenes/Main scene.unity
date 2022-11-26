@@ -269,8 +269,9 @@ GameObject:
   - component: {fileID: 480842639}
   - component: {fileID: 480842638}
   - component: {fileID: 480842637}
+  - component: {fileID: 480842640}
   m_Layer: 5
-  m_Name: Hero2
+  m_Name: Item2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -294,8 +295,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.9228015, y: 0.29}
-  m_SizeDelta: {x: 2.4619, y: 0.863}
+  m_AnchoredPosition: {x: 0.2716999, y: 1.31}
+  m_SizeDelta: {x: 1.1597, y: 0.8263}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &480842637
 MonoBehaviour:
@@ -340,7 +341,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 480842638}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 480842640}
+        m_TargetAssemblyTypeName: Desolator, Assembly-CSharp
+        m_MethodName: buyItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &480842638
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -361,7 +374,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 3f3ac4de93b0c2a49a172f3a9a28d256, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -379,6 +392,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 480842635}
   m_CullTransparentMesh: 1
+--- !u!114 &480842640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 480842635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f011cc1826a9cb488a82b1f2c44fecc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  price: 50
+  counterItems: 0
+  item: {fileID: 480842635}
+  damage: 50
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -830,7 +859,7 @@ GameObject:
   - component: {fileID: 765971736}
   - component: {fileID: 765971735}
   m_Layer: 5
-  m_Name: Hero1
+  m_Name: Item1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -854,8 +883,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.9228015, y: 2.69}
-  m_SizeDelta: {x: 2.4619, y: 0.863}
+  m_AnchoredPosition: {x: 0.2717, y: 2.6717}
+  m_SizeDelta: {x: 1.1597, y: 0.8997}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &765971735
 MonoBehaviour:
@@ -900,7 +929,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 765971736}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &765971736
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -921,7 +962,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 5fe53cee60468fc4aa29c1be1f591df3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1092,7 +1133,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &898720735
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1468,7 +1509,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000061035156, y: 0}
+  m_AnchoredPosition: {x: 0.089904785, y: 0.3671875}
   m_SizeDelta: {x: 0.00012207031, y: 0.00012207031}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1265125016
@@ -1528,7 +1569,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1346632595
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1781,7 +1822,7 @@ GameObject:
   - component: {fileID: 1410422521}
   - component: {fileID: 1410422520}
   m_Layer: 5
-  m_Name: Hero3
+  m_Name: Item3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1805,8 +1846,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.9228015, y: -2.07}
-  m_SizeDelta: {x: 2.4619, y: 0.863}
+  m_AnchoredPosition: {x: 0.2717, y: 0}
+  m_SizeDelta: {x: 1.1597, y: 0.7519}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1410422520
 MonoBehaviour:
@@ -1904,15 +1945,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9055243107617447106, guid: 23d6a7b526aa38d4eb232c07f96ae223, type: 3}
       propertyPath: m_Volume
-      value: 0.3
+      value: 0.077
       objectReference: {fileID: 0}
     - target: {fileID: 9055243107617447133, guid: 23d6a7b526aa38d4eb232c07f96ae223, type: 3}
       propertyPath: Damage
       value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 9055243107617447134, guid: 23d6a7b526aa38d4eb232c07f96ae223, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9055243107617447134, guid: 23d6a7b526aa38d4eb232c07f96ae223, type: 3}
+      propertyPath: m_FlipY
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9055243107617447134, guid: 23d6a7b526aa38d4eb232c07f96ae223, type: 3}
       propertyPath: m_SortingOrder
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9055243107617447135, guid: 23d6a7b526aa38d4eb232c07f96ae223, type: 3}
       propertyPath: m_RootOrder
@@ -2310,6 +2359,7 @@ GameObject:
   - component: {fileID: 1944028031}
   - component: {fileID: 1944028033}
   - component: {fileID: 1944028032}
+  - component: {fileID: 1944028034}
   m_Layer: 5
   m_Name: Text (Legacy)
   m_TagString: Untagged
@@ -2379,6 +2429,62 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1944028030}
   m_CullTransparentMesh: 1
+--- !u!114 &1944028034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1944028030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1944028032}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11500000, guid: 6905476f0860cb34eb0bb3fec1937e73, type: 3}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1970716292
 GameObject:
   m_ObjectHideFlags: 0

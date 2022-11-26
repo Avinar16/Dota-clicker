@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Juggernaut : Hero
+public class Midas : ItemScript
 {
-}
+    public int goldPerSeconds = 1;
+
+}   
