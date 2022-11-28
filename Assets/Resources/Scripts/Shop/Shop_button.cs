@@ -29,7 +29,12 @@ public class Shop_button : MonoBehaviour
     private GameObject InfoTextObject;
     private Text InfoText;
 
-
+    private void Start()
+    {
+        InfoText.text = $"Цена: {Costs[CurrentLevel]}" +
+                $"\n+{GoldPerSec[CurrentLevel]} Золота/сек" +
+                $"\n+{Attack[CurrentLevel]} Атаки";
+    }
 
     private void Awake()
     {
@@ -41,7 +46,7 @@ public class Shop_button : MonoBehaviour
     void Update()
     {
         CurrentGold = GoldCounter.currentGold;
-        if(CurrentGold >= Costs[CurrentLevel] && CurrentLevel < Costs.Count - 1)
+        if(CurrentGold >= Costs[CurrentLevel] && CurrentLevel < Costs.Count)
         {
             button.interactable = true;
         }
@@ -53,7 +58,7 @@ public class Shop_button : MonoBehaviour
     public void IsActiveButton()
     {
         // Покупка, если нажата кнопка и уровень ниже максимального
-        if (button.IsInteractable() && CurrentLevel < Costs.Count - 1)
+        if (button.IsInteractable() && CurrentLevel < Costs.Count)
         {
             // Покупка
             GoldCounter.currentGold -= Costs[CurrentLevel];
@@ -65,8 +70,6 @@ public class Shop_button : MonoBehaviour
     }
     private void SetLevel()
     {
-        // Смена предмета на уровень выше
-        CurrentLevel += 1;
         // Смена картинки
         LevelImage.sprite = LevelSprites[CurrentLevel];
         LevelImage.color = new Color(255, 255, 255);
@@ -79,10 +82,15 @@ public class Shop_button : MonoBehaviour
         }
         else
         {
+            // Смена предмета на уровень выше
+            CurrentLevel += 1;
             InfoText.text = $"Цена: {Costs[CurrentLevel]}" +
                 $"\n+{GoldPerSec[CurrentLevel]} Золота/сек" +
                 $"\n+{Attack[CurrentLevel]} Атаки";
         }
+        // Смена картинки
+        LevelImage.sprite = LevelSprites[CurrentLevel];
+        LevelImage.color = new Color(255, 255, 255);
     }
 }
 
