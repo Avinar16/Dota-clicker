@@ -5,13 +5,14 @@ using UnityEngine.UI;
 
 public class GoldCounter : MonoBehaviour
 {
-    public static int currentGold = 0;
-    public static int goldPerSecond = 0;
+    public static int currentGold = 9999;
+    public static int goldPerSecond = 1;
     Text goldText;
 
     void Start()
     {
         goldText = GetComponent<Text>();
+        StartCoroutine(GoldPerSecond());
     }
 
     void Update()
@@ -34,6 +35,14 @@ public class GoldCounter : MonoBehaviour
     public int wasteGold(int gold)
     {
         return currentGold - gold;
+    }
+    private IEnumerator GoldPerSecond()
+    {
+        while (true) {
+            yield return new WaitForSeconds(1);
+            currentGold += goldPerSecond;
+        }
+        
     }
 
 }

@@ -6,7 +6,7 @@ public class Hero : MonoBehaviour
 {
     [SerializeField]
     public Animator animator;
-    public int Damage;
+    public static int Damage = 45;
     protected int exp;
     [SerializeField]
     protected int level = 1;
