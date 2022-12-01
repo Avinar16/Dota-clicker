@@ -2,17 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class LevelSelector : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField]
+    private Button button;
+
 
     public void OpenScene()
     {
-        SceneManager.LoadScene("LineCreepsScene"); 
+        SceneManager.LoadScene("LineCreepsScene");
+        
     }
 }
