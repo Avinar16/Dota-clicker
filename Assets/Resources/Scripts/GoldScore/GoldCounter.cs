@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class GoldCounter : MonoBehaviour
 {
-    public static int currentGold = 9999;
+    public static int currentGold = 10000;
     public static int goldPerSecond = 1;
     Text goldText;
 
@@ -20,22 +20,6 @@ public class GoldCounter : MonoBehaviour
         goldText.text = "" + currentGold;
     }
 
-    public int getGold()
-    {
-        return currentGold;
-    }
-
-    // Добавление золота к общему счётчику
-    public int receivingGold(int gold)
-    {
-        return currentGold + gold;
-    }
-
-    // Вычитание золота из общего счётчика
-    public int wasteGold(int gold)
-    {
-        return currentGold - gold;
-    }
     private IEnumerator GoldPerSecond()
     {
         while (true) {
@@ -44,5 +28,4 @@ public class GoldCounter : MonoBehaviour
         }
         
     }
-
 }

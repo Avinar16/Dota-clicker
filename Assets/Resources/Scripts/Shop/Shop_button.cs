@@ -13,18 +13,23 @@ public class Shop_button : MonoBehaviour
 
     private Button button;
 
+    // Увеличение золота в секунду
     [SerializeField]
     private List<int> GoldPerSec;
+    // Увеличение урона главного героя
     [SerializeField]
     private List<int> Attack;
 
+    // Уровень предметов
     [SerializeField]
     private GameObject LevelImageObject;
     private Image LevelImage;
 
+    // Список спрайтов предметов зависящий от уровня
     [SerializeField]
     private List<Sprite> LevelSprites;
 
+    // Информация о предмете
     [SerializeField]
     private GameObject InfoTextObject;
     private Text InfoText;
@@ -55,7 +60,7 @@ public class Shop_button : MonoBehaviour
             button.interactable = false;
         }
     }
-    public void IsActiveButton()
+    public void Buy()
     {
         // Покупка, если нажата кнопка и уровень ниже максимального
         if (button.IsInteractable() && CurrentLevel < Costs.Count)
@@ -68,6 +73,7 @@ public class Shop_button : MonoBehaviour
             SetLevel();
         }
     }
+
     private void SetLevel()
     {
         // Смена картинки
@@ -83,7 +89,7 @@ public class Shop_button : MonoBehaviour
         else
         {
             // Смена предмета на уровень выше
-            CurrentLevel += 1;
+            CurrentLevel++;
             InfoText.text = $"Цена: {Costs[CurrentLevel]}" +
                 $"\n+{GoldPerSec[CurrentLevel]} Золота/сек" +
                 $"\n+{Attack[CurrentLevel]} Атаки";
