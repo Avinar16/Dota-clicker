@@ -18,6 +18,9 @@ public class Main_spawner : MonoBehaviour
     [SerializeField]
     private Forest_spawner Forest_creeps;
 
+    [SerializeField]
+    private Boss_spawner Boss_creeps;
+
 
     [SerializeField]
     private GameObject canvas;
@@ -49,7 +52,8 @@ public class Main_spawner : MonoBehaviour
         creeps_dict =  new Dictionary<string, Basic_spawner>
         {
             {"Lane_creeps",  Lane_creeps},
-            {"Forest_creeps",  Forest_creeps}
+            {"Forest_creeps",  Forest_creeps},
+            {"Boss_spawner", Boss_creeps}
         };
 
         //Первая пачка

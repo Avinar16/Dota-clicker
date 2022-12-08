@@ -1033,7 +1033,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 445727985}
         m_TargetAssemblyTypeName: Shop_button, Assembly-CSharp
-        m_MethodName: IsActiveButton
+        m_MethodName: Buy
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1212,7 +1212,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 459238318}
         m_TargetAssemblyTypeName: Shop_button, Assembly-CSharp
-        m_MethodName: IsActiveButton
+        m_MethodName: Buy
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1773,7 +1773,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 603995373}
         m_TargetAssemblyTypeName: Shop_button, Assembly-CSharp
-        m_MethodName: IsActiveButton
+        m_MethodName: Buy
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2765,6 +2765,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 816193935}
   m_CullTransparentMesh: 1
+--- !u!82 &888021483 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 9055243107617447106, guid: 23d6a7b526aa38d4eb232c07f96ae223, type: 3}
+  m_PrefabInstance: {fileID: 1489200697}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &893367060
 GameObject:
   m_ObjectHideFlags: 0
@@ -3395,7 +3400,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1050253652}
         m_TargetAssemblyTypeName: Shop_button, Assembly-CSharp
-        m_MethodName: IsActiveButton
+        m_MethodName: Buy
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3523,6 +3528,16 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1176530178}
   m_CullTransparentMesh: 1
+--- !u!1 &1200721577 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1604467635785830423, guid: bb06698f8bedfae48b37c991531ea1e0, type: 3}
+  m_PrefabInstance: {fileID: 1646232234}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &1200721578 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 1604467635785830416, guid: bb06698f8bedfae48b37c991531ea1e0, type: 3}
+  m_PrefabInstance: {fileID: 1646232234}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1265125014
 GameObject:
   m_ObjectHideFlags: 0
@@ -3805,7 +3820,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1371730724}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2108833899}
+        m_TargetAssemblyTypeName: Main_spawner, Assembly-CSharp
+        m_MethodName: ChooseCreeps
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Boss_spawner
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1371730724
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3826,7 +3853,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ecd476a656acb624788996f278f3e9f3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 92c63d564e5c7064287124bf81a4d8a1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3954,7 +3981,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1398089214}
         m_TargetAssemblyTypeName: Shop_button, Assembly-CSharp
-        m_MethodName: IsActiveButton
+        m_MethodName: Buy
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4546,6 +4573,129 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1630960689}
   m_CullTransparentMesh: 1
+--- !u!1001 &1646232234
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 2041499162}
+    m_Modifications:
+    - target: {fileID: 1604467635057433635, guid: bb06698f8bedfae48b37c991531ea1e0, type: 3}
+      propertyPath: Shop
+      value: 
+      objectReference: {fileID: 1346632594}
+    - target: {fileID: 1604467635057433635, guid: bb06698f8bedfae48b37c991531ea1e0, type: 3}
+      propertyPath: Sound
+      value: 
+      objectReference: {fileID: 8300000, guid: 05ab0a8035159ff4ca68167fce78244f, type: 3}
+    - target: {fileID: 1604467635057433635, guid: bb06698f8bedfae48b37c991531ea1e0, type: 3}
+      propertyPath: Scenes
+      value: 
+      objectReference: {fileID: 898720734}
+    - target: {fileID: 1604467635057433635, guid: bb06698f8bedfae48b37c991531ea1e0, type: 3}
+      propertyPath: Source
+      value: 
+      objectReference: {fileID: 888021483}
+    - target: {fileID: 1604467635057433635, guid: bb06698f8bedfae48b37c991531ea1e0, type: 3}
+      propertyPath: ShopButton
+      value: 
+      objectReference: {fileID: 1873165456}
+    - target: {fileID: 1604467635785830416, guid: bb06698f8bedfae48b37c991531ea1e0, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1604467635785830416, guid: bb06698f8bedfae48b37c991531ea1e0, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1604467635785830416, guid: bb06698f8bedfae48b37c991531ea1e0, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1604467635785830416, guid: bb06698f8bedfae48b37c991531ea1e0, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1604467635785830416, guid: bb06698f8bedfae48b37c991531ea1e0, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1604467635785830416, guid: bb06698f8bedfae48b37c991531ea1e0, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1604467635785830416, guid: bb06698f8bedfae48b37c991531ea1e0, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1604467635785830416, guid: bb06698f8bedfae48b37c991531ea1e0, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 691.66003
+      objectReference: {fileID: 0}
+    - target: {fileID: 1604467635785830416, guid: bb06698f8bedfae48b37c991531ea1e0, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 111.599976
+      objectReference: {fileID: 0}
+    - target: {fileID: 1604467635785830416, guid: bb06698f8bedfae48b37c991531ea1e0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1604467635785830416, guid: bb06698f8bedfae48b37c991531ea1e0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1604467635785830416, guid: bb06698f8bedfae48b37c991531ea1e0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1604467635785830416, guid: bb06698f8bedfae48b37c991531ea1e0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1604467635785830416, guid: bb06698f8bedfae48b37c991531ea1e0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1604467635785830416, guid: bb06698f8bedfae48b37c991531ea1e0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1604467635785830416, guid: bb06698f8bedfae48b37c991531ea1e0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1604467635785830416, guid: bb06698f8bedfae48b37c991531ea1e0, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1604467635785830416, guid: bb06698f8bedfae48b37c991531ea1e0, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -55.429993
+      objectReference: {fileID: 0}
+    - target: {fileID: 1604467635785830416, guid: bb06698f8bedfae48b37c991531ea1e0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1604467635785830416, guid: bb06698f8bedfae48b37c991531ea1e0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1604467635785830416, guid: bb06698f8bedfae48b37c991531ea1e0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1604467635785830423, guid: bb06698f8bedfae48b37c991531ea1e0, type: 3}
+      propertyPath: m_Name
+      value: Timer
+      objectReference: {fileID: 0}
+    - target: {fileID: 1604467635785830423, guid: bb06698f8bedfae48b37c991531ea1e0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: bb06698f8bedfae48b37c991531ea1e0, type: 3}
 --- !u!1 &1721887239
 GameObject:
   m_ObjectHideFlags: 0
@@ -5151,6 +5301,7 @@ RectTransform:
   - {fileID: 1970716293}
   - {fileID: 1873165457}
   - {fileID: 1749622378}
+  - {fileID: 1200721578}
   m_Father: {fileID: 747682796}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5420,7 +5571,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2105894114}
         m_TargetAssemblyTypeName: Shop_button, Assembly-CSharp
-        m_MethodName: IsActiveButton
+        m_MethodName: Buy
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5480,6 +5631,7 @@ GameObject:
   - component: {fileID: 2108833899}
   - component: {fileID: 2108833900}
   - component: {fileID: 2108833901}
+  - component: {fileID: 2108833902}
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
@@ -5517,6 +5669,7 @@ MonoBehaviour:
   healthBar: {fileID: 1186080749792628075, guid: cacd26eca1d35e3489805624ffd1f5f1, type: 3}
   Lane_creeps: {fileID: 2108833900}
   Forest_creeps: {fileID: 2108833901}
+  Boss_creeps: {fileID: 2108833902}
   canvas: {fileID: 2041499161}
   Wave: []
 --- !u!114 &2108833900
@@ -5577,6 +5730,26 @@ MonoBehaviour:
   - {fileID: 2084252571942031969, guid: 412f5c98463c2294493bff820c455c33, type: 3}
   - {fileID: 2031352293847407274, guid: 165d44ada1e3c5c459af2e8089d5627e, type: 3}
   - {fileID: 2031352293847407274, guid: 165d44ada1e3c5c459af2e8089d5627e, type: 3}
+--- !u!114 &2108833902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2108833895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16cdad4e525056247af1f54e2cf8127a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  background: {fileID: 1265125016}
+  sprite: {fileID: 21300000, guid: 92c63d564e5c7064287124bf81a4d8a1, type: 3}
+  TimerObject: {fileID: 1200721577}
+  bosses:
+  - {fileID: 4353359872156186136, guid: 9d338595a635d784ab3cd14893407cea, type: 3}
+  - {fileID: 1414533715074992467, guid: a1e56555ae6af104b8e7865b89097357, type: 3}
+  - {fileID: 642649280329926275, guid: 69a34618441d99d418f9468050edaa67, type: 3}
+  Level: 0
 --- !u!1 &2116370222
 GameObject:
   m_ObjectHideFlags: 0

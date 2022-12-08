@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Hero : MonoBehaviour
 {
+    // singleton на минималках
+    public static Hero hero { get; private set; }
     [SerializeField]
     public Animator animator;
     public static int Damage = 45;
@@ -18,6 +20,7 @@ public class Hero : MonoBehaviour
 
     private void Start()
     {
+        hero = this;
         audioSourse = GetComponent<AudioSource>();
     }
 

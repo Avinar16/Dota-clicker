@@ -24,7 +24,7 @@ public class Creep : MonoBehaviour
         health_bar.SetHp(health);
     }
 
-    private void Die()
+    public void Die()
     {
         if(health <= 0)
         {
