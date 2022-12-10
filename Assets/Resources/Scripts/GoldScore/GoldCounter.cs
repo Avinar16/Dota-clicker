@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class GoldCounter : MonoBehaviour
 {
-    public static int currentGold = 10000;
+    public static int currentGold = 100000;
     public static int goldPerSecond = 1;
     Text goldText;
 

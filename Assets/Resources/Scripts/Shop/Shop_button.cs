@@ -6,6 +6,10 @@ using UnityEngine.UI;
 public class Shop_button : MonoBehaviour
 {
     [SerializeField]
+    private int maxLevel;
+    private int levelItem = 0;
+
+    [SerializeField]
     private List<int> Costs;
     private int CurrentLevel = 0;
 
@@ -51,7 +55,7 @@ public class Shop_button : MonoBehaviour
     void Update()
     {
         CurrentGold = GoldCounter.currentGold;
-        if(CurrentGold >= Costs[CurrentLevel] && CurrentLevel < Costs.Count)
+        if(CurrentGold >= Costs[CurrentLevel] && levelItem < maxLevel)
         {
             button.interactable = true;
         }
@@ -60,10 +64,11 @@ public class Shop_button : MonoBehaviour
             button.interactable = false;
         }
     }
+
     public void Buy()
     {
         // Покупка, если нажата кнопка и уровень ниже максимального
-        if (button.IsInteractable() && CurrentLevel < Costs.Count)
+        if (button.IsInteractable())
         {
             // Покупка
             GoldCounter.currentGold -= Costs[CurrentLevel];
@@ -71,6 +76,7 @@ public class Shop_button : MonoBehaviour
             Hero.Damage += Attack[CurrentLevel];
             GoldCounter.goldPerSecond += GoldPerSec[CurrentLevel];
             SetLevel();
+            Debug.Log(CurrentLevel);
         }
     }
 
@@ -82,6 +88,7 @@ public class Shop_button : MonoBehaviour
         // Отображение информации
         if(CurrentLevel == Costs.Count - 1)
         {
+            levelItem = 3;
             InfoText.text = $"Макс уровень" +
                 $"\n+{GoldPerSec[CurrentLevel]} Золота/сек" +
                 $"\n+{Attack[CurrentLevel]} Атаки";
@@ -99,4 +106,3 @@ public class Shop_button : MonoBehaviour
         LevelImage.color = new Color(255, 255, 255);
     }
 }
-

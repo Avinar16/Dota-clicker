@@ -26,6 +26,4 @@ public class HealthBar : MonoBehaviour
         if (health_bar.value <= 0) { Destroy(gameObject); }
         
     }
-    
-
 }
