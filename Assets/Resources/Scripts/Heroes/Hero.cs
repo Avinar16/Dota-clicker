@@ -41,13 +41,9 @@ public class Hero : MonoBehaviour
             {
                 isAttack = true;
 
-                //find creep's script
                 Creep enemy = GameObject.FindGameObjectWithTag("Creep").GetComponent<Creep>();
                 
                 enemy.TakeDamage(Damage);
-
-                // Log
-                //Debug.Log($"attack {enemy.name} Health= {enemy.health}");
 
             }
             else

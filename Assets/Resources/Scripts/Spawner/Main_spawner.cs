@@ -87,7 +87,6 @@ public class Main_spawner : MonoBehaviour
         choice = creeps;
         Destroy(enemy_creep);
         Destroy(enemy_hp);
-        //Debug.Log("Выбор");
         CreateWave();
     }
     
@@ -103,11 +102,11 @@ public class Main_spawner : MonoBehaviour
         Wave.RemoveAt(0);
         if (Wave.Count == 0)
         {
-            Debug.Log($"У нас всё закончилось {Wave.Count}");
             CreateWave();
         }
-        else { Spawn(); Debug.Log($"Спавним некст {Wave.Count}") ;  }
-        
-    }
-            
-        }   
+        else 
+        { 
+            Spawn(); 
+        }
+    }   
+ }   

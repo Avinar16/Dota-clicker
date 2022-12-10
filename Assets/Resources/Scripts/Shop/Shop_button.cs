@@ -76,7 +76,6 @@ public class Shop_button : MonoBehaviour
             Hero.Damage += Attack[CurrentLevel];
             GoldCounter.goldPerSecond += GoldPerSec[CurrentLevel];
             SetLevel();
-            Debug.Log(CurrentLevel);
         }
     }
 
